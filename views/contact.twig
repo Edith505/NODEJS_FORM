@@ -2,7 +2,24 @@
     {% block content %}
     
     <div class="container">
-    
+      <h1 class="title-contact">FORMULAIRE DE CONTACT</h1>
+      <p class="prg-contact">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+      <form class="form-contact">
+        <div class="mb-3">
+          <label for="exampleInputEmail1">Adresse email</label>
+          <input type="email" class="form-control" name= "email" id="email" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre email avec quelqu'un d'autre.</small>
+        </div>
+        <div class="mb-3">
+          <label for="subject">subject :</label>
+          <input type="subject" name = "subject" class="form-control" id="subject">
+        </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Votre Message :</label>
+        <textarea class="form-control" id="message" rows="3"></textarea>
+      </div>
+        <button type="submit" class="btn btn-lg btn-success btn-block mb-3">Envoyer</button>
+      </form>
     </div>
 
 {% endblock %}

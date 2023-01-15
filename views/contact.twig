@@ -4,10 +4,10 @@
     <div class="container">
       <h1 class="title-contact">FORMULAIRE DE CONTACT</h1>
       <p class="prg-contact">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
-      <form class="form-contact">
+      <form class="form-contact" method="POST" action="/contact">
         <div class="mb-3">
           <label for="exampleInputEmail1">Adresse email</label>
-          <input type="email" class="form-control" name= "email" id="email" aria-describedby="emailHelp">
+          <input type="email" class="form-control" name= "email" id="email" aria-describedby="emailHelp" placeholder="exemple@mail.com">
           <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre email avec quelqu'un d'autre.</small>
         </div>
         <div class="mb-3">
@@ -16,9 +16,15 @@
         </div>
       <div class="mb-3">
         <label for="message" class="form-label">Votre Message :</label>
-        <textarea class="form-control" id="message" rows="3"></textarea>
+        <textarea class="form-control" name="message" id="message" rows="4"></textarea>
       </div>
         <button type="submit" class="btn btn-lg btn-success btn-block mb-3">Envoyer</button>
+        {% if success %}
+          <div class = " alert alert-sucess">{{success}}</div>
+        {% endif %}
+          {% if error %}
+          <div class = " alert alert-danger">{{error}}</div>
+        {% endif %}
       </form>
     </div>
 

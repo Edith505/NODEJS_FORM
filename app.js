@@ -1,8 +1,15 @@
 const express = require('express');
-const { get } = require('./routes/rooter');
 const app = express()
 const indexRouter = require('./routes/rooter')
+const bodyParser = require('body-parser')
 const port = 3000
+
+
+// analyse l'application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// analyse l'application/json
+app.use(bodyParser.json());
 
 //Ajout d'un fichier static comme Css/javascrip ou des images
 app.use(express.static('public'))
@@ -18,7 +25,9 @@ app.use('/', (req, res, next) =>{
     //exemple d'un middlwares
     console.log("middlewares succès");
     next();
-}) 
+})
+
+
 
 /*
 //Affichage de la page d'acceuille dans le path'/'

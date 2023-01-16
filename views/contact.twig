@@ -1,5 +1,6 @@
   {% extends  "base.twig" %}  
-    {% block content %}
+
+{% block content %}
     
     <div class="container">
       <h1 class="title-contact">FORMULAIRE DE CONTACT</h1>
@@ -8,17 +9,26 @@
         <div class="mb-3">
           <label for="exampleInputEmail1">Adresse email</label>
           <input type="email" class="form-control" name= "email" id="email" aria-describedby="emailHelp" placeholder="exemple@mail.com">
+          {% if formError.email %}
+            <p class="error">{{formError.email.message}}</p>
+          {% endif %}
           <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre email avec quelqu'un d'autre.</small>
         </div>
         <div class="mb-3">
           <label for="subject">subject :</label>
           <input type="subject" name = "subject" class="form-control" id="subject">
+          {% if formError.subject %}
+            <p class="error">{{formError.subject.message}}</p>
+          {% endif %}
         </div>
       <div class="mb-3">
         <label for="message" class="form-label">Votre Message :</label>
         <textarea class="form-control" name="message" id="message" rows="4"></textarea>
+          {% if formError.message %}
+            <p class="error">{{formError.message.message}}</p>
+          {% endif %}
       </div>
-        <button type="submit" class="btn btn-lg btn-success btn-block mb-3">Envoyer</button>
+        <button type="submit" class="btn btn-lg btn-success btn-block mb-3 sub">Envoyer</button>
         {% if success %}
           <div class = " alert alert-sucess">{{success}}</div>
         {% endif %}

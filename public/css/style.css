@@ -16,6 +16,16 @@
     text-align: center;
     padding-top: 25px;
 }
+.error{
+    padding: 10px;
+    color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.sub{
+    margin-top: 10px;
+}
 .prg-contact{
     text-align: center;
     font-style: italic;
@@ -23,6 +33,7 @@
 .prg img{
     margin: 25px 0;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    width: 80%;
 }
 .title-contact{
     text-align: center;

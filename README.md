@@ -14,3 +14,5 @@ cette methode qui nous permet de recuperer les donner de la formulaire et ensuit
 # installer le module nodemailer pour envoyer un email
 a prendre en compte que Transporteur est un objet qui va donner les informations sur le service afin d'envoyer le mail.
 
+# installer npm-node-input-validator
+
